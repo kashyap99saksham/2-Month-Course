@@ -17,15 +17,13 @@
 //         while(i<size-1)
 //         {
 //             int min,max;       
-//             while(i<size-1 && arr[i+1]<arr[i])
+//             while(i < size-1 && arr[i+1] < arr[i])
 //                 i++;
-//             if(i==size-1)
-//                 break;
 //             min = i++;
-//             while(i<size-1 && arr[i+1]>arr[i])
+//             while(i < size-1 && arr[i+1] > arr[i])
 //                 i++;
 //             max = i;
-//             if(min==0 && max==0)
+//             if(min == 0 && max == 0)
 //             {
 //                 cout<<"No Profit";
 //                 break;
@@ -36,21 +34,21 @@
 //     }
 // }
 
-//RUNNING IN G4G IDE
+// //RUNNING IN G4G IDE
 #include<bits/stdc++.h>
 #include<iostream>
 using namespace std;
 void get(int arr[],int n)
 {
     int i=0,a=0,b=0;
-    while(i<n-1)
+    while(i < n-1)
     {
-        while(i<n-1 && arr[i+1]<=arr[i])
-        i++;
-        if(i==n-1)
-        break;
-        a=i++;
-        while(i<n && arr[i]>=arr[i-1])
+        while( i < n-1 && arr[i+1] <= arr[i])
+            i++;
+        if(i == n-1)
+            break;
+        a = i++;
+        while(i < n && arr[i] >= arr[i-1])
         i++;
         b=i-1;
         cout<<"("<<a<<" "<<b<<")"<<" ";
