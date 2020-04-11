@@ -1,6 +1,26 @@
-//-------------- 1.Good Way to sort--------------
-
-
+//-------------- 1.Good Way to Use Map--------------
+#include<bits/stdc++.h>
+using namespace std;
+int main() 
+{
+    int t;  cin>>t;
+    while(t--)
+    {
+        int size;   cin>>size;
+        // int arr[size];
+        // vector<int>v;
+        map<char,int>m;
+        for (int i = 0; i < size; i++)
+        {
+            char val;   cin>>val;   m[val]++;            
+        }
+        for(auto i : m)
+        {
+			cout<<i.first; 
+        }
+        cout<<endl;        
+    }       
+}
 
 // ------------------------ 2. Hashmap based solution to solve 
 #include <bits/stdc++.h> 

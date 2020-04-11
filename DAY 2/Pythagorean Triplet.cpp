@@ -12,7 +12,7 @@ int main()
         {
             int val;    cin>>val;   int val2 = pow(val,2);   m[val2];
         }
-        bool flag = false;
+        bool flag = false; 
         for (auto i : m)
         {
             for (auto j : m)

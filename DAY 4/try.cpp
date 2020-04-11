@@ -6,9 +6,10 @@ int main()
     while(t--)
     {
         int size;   cin>>size;
-        int arr[size]
+        // int arr[size];
+        // vector<int>v;
+        // unordered_map <int,int> m;
         cout<<endl;        
     }       
 }
 
-#

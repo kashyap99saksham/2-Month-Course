@@ -1,7 +1,6 @@
-
-
+// USING MAX/MIN - HEAP
+// USING QUICK SELECT
 // Using INT_MIN
-
 
 //  SORTING IN O(n) USING MAP INDEXING
 #include<bits/stdc++.h>
