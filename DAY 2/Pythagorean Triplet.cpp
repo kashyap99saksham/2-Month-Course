@@ -1,35 +1,37 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-int main() 
+bool triplet(int arr[],int n)
 {
-    int t;  cin>>t;
-    while(t--)
-    {
-        int size;   cin>>size;
-        unordered_map <int,int> m;
-        // vector <int> v;
-        for (int i = 0; i < size; i++)
-        {
-            int val;    cin>>val;   int val2 = pow(val,2);   m[val2];
-        }
-        bool flag = false; 
-        for (auto i : m)
-        {
-            for (auto j : m)
-            {
-                int sum = (i.first + j.second);
-                if(m.find(sum) != m.end())
-                {
-                    flag = true;
-                    cout<<"Yeah Mill gya\n";
-                    break;
-                }
-            }
-            if(flag == true)
-                break;
-        }
-        if(flag == false)
-            cout<<"Nhi mila\n";        
-        cout<<endl;        
-    }       
+    int l,r;
+    for(int i=0;i<n;i++)
+        arr[i]=(arr[i]*arr[i]);
+    for(int i = n-1; i >= 2; i--) 
+    { 
+        int l = 0;
+        int r = i-1;
+        while (l < r) 
+        { 
+            if (arr[l] + arr[r] == arr[i]) 
+                return true; 
+            (arr[l] + arr[r] < arr[i])?  l++: r--; 
+        } 
+    } 
+    return false; 
+}
+int main()
+{
+	int t;
+	cin >> t;
+	while(t--)
+	{
+	    int n, k;
+	    cin>>n;
+	    int a[n];
+	    for(int i=0;i<n;i++)cin>>a[i];
+	    sort(a,a+n);
+	        if(triplet(a,n))
+	        cout<<"Yes";
+	        else cout<<"No";
+	    cout<<'\n';
+	}
 }
