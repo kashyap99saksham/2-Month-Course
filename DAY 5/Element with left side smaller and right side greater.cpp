@@ -18,7 +18,7 @@ int main() {
 	    aux[0] = false;
 	    for(int i=1;i<n-1;i++)
 	    {
-	        if(max>arr[i])
+	        if(arr[i] < max)
 	        {
 	            aux[i] = false;
 	        }
@@ -35,12 +35,12 @@ int main() {
 	    {
 	        if(aux[i]==true)
 	        {
-	            if(min<arr[i])
+	            if(arr[i] > min )
     	            aux[i]=false;
     	        else
     	            ans = arr[i];
 	        }
-	        if(min>arr[i]) min = arr[i];
+	        if(arr[i] < min ) min = arr[i];
 	    }
         cout<<ans<<"\n";
 	}
