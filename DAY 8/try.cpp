@@ -6,7 +6,7 @@ int main()
     int t;  cin>>t;
     while(t--)
     {
-        int size;   cin>>size;
+        int size;   cin>>size; 
         // int arr[size];
         // vector<int>v(size);
         // unordered_map <int,int> m;
