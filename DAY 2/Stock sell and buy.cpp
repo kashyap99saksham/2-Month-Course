@@ -1,39 +1,3 @@
-// #include<bits/stdc++.h>
-// using namespace std;
-// int main()
-// {
-//     int test;
-//     cin>>test;
-//     while(test--)
-//     {
-//         int size;
-//         cin>>size;
-//         int *arr = new int[size];
-//         for (int i = 0; i < size; i++)
-//         {
-//             cin>>arr[i];
-//         }
-//         int i=0;
-//         while(i<size-1)
-//         {
-//             int min,max;       
-//             while(i < size-1 && arr[i+1] < arr[i])
-//                 i++;
-//             min = i++;
-//             while(i < size-1 && arr[i+1] > arr[i])
-//                 i++;
-//             max = i;
-//             if(min == 0 && max == 0)
-//             {
-//                 cout<<"No Profit";
-//                 break;
-//             }
-//             cout<<"("<<min<<" "<<max<<")"<<" ";
-//         }   
-//         cout<<endl;
-//     }
-// }
-
 // //RUNNING IN G4G IDE
 #include<bits/stdc++.h>
 #include<iostream>
@@ -49,8 +13,8 @@ void get(int arr[],int n)
             break;
         a = i++;
         while(i < n && arr[i] >= arr[i-1])
-        i++;
-        b=i-1;
+            i++;
+        b = i-1;
         cout<<"("<<a<<" "<<b<<")"<<" ";
     }
     if(a==0 && b==0)
