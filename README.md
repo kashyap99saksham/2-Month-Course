@@ -1,3 +1,1 @@
-# 2-Month-Course
-Cover All Topics 
-## Covered With Amour
+# All Data Structure and Algo. Concepts
