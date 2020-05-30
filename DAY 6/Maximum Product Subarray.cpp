@@ -1,32 +1,31 @@
 // WRONG/INCORRECT
+#include <boost/multiprecision/cpp_int.hpp> 
+using namespace boost::multiprecision; 
 #include<bits/stdc++.h>
 using namespace std;
-#define lint long long int
-#define loop(n) for(lint i=0;i<n;i++)
+#define loop(n) for(int128_t i=0;i<n;i++)
 
 int main() 
 {
-    int t;  cin>>t;
+    int128_t t;  cin>>t;
     while(t--)
     {
-        lint size;   cin>>size;
-        vector<int>v(size);
+        int128_t size;   cin>>size;
+        vector<int128_t>v(size);
         loop(size)  cin>>v[i];
-        int Pmax = 1,local = 0,global = 0, Nmax = 1;
-        loop(size)
+        int128_t CurrentMax = v[0],CurrentMin = v[0],final = v[0];
+        // bool flag = false;
+        for(int128_t i = 1 ;i < size ; i++) 
         {
-            Pmax = Pmax * v[i];
-            Nmax = Nmax * v[i];
-            
-            local = max(Pmax,Nmax);
-            if(local > global)
-                global = local;
-            if(Pmax <= 0)
-                Pmax = 1;
-            if(Nmax == 0)
-                Nmax = 1;
+            int128_t temp = CurrentMax;
+            CurrentMax = max(CurrentMax * v[i] ,max( CurrentMin * v[i], v[i] ));
+            CurrentMin = min(temp * v[i],min( CurrentMin * v[i], v[i]));
+            // if(CurrentMax >= final) 
+                // flag = true;
+            final = max(final,CurrentMax);
         }
-        cout<<global<<endl;        
+        // if(!flag){   cout<<v[0]; break; }
+        cout<<final<<endl;        
     }       
 }
 
