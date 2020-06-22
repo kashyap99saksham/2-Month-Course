@@ -1,0 +1,8 @@
+It converts an int in char form into an actual int.
+
+For example, if s[i] is '9' then s[i] - '0' will produce 9.
+
+
+Priority Queues can be implemented using common data structures like arrays, linked-lists, heaps and binary trees.
+
+

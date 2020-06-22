@@ -1,0 +1,11 @@
+Left Shift Operator : <<
+int x = 5;
+int b = x<<1;	\\b = 10
+int b = x<<2;   \\b = 20
+Basic Rule if x*2^i		[i = shift number] 
+Right Shift Operator : >>
+int x = 5;
+int b = x<<1;	\\b = 2
+int b = x<<2;   \\b = 1
+Basic Rule if x/2^i		[i = shift number] 
+
