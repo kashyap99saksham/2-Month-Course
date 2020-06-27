@@ -13,7 +13,6 @@ vector<int> levelOrder(Node* node)
             q.push(q.front()->right);
         v.push_back(q.front()->data);
         q.pop();
-        node = q.front();
     }
     return v;
 }
