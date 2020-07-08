@@ -29,7 +29,7 @@ Poly *AddingPoly(Poly eq1,Poly eq2)
     Poly *res;
     res = new Poly;
     res->list = new PolyStruct[eq1.n + eq2.n];          //Since Max Size of resultant eq. will be sum of both n
-    int i = 0, j =0, k = 0;
+    int i = 0, j = 0, k = 0;
     while(i < eq1.n || j < eq2.n)
     {
         if(i == eq1.n && j < eq2.n)     //If Any Eq. is End but another one is left
