@@ -1,0 +1,12 @@
+Q. What is substring in a string 
+input : abcd
+Output :  a 
+          b
+          c
+          d
+          ab
+          bc
+          cd
+          abc
+          bcd
+          abcd

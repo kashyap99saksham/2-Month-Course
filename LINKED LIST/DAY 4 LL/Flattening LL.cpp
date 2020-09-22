@@ -2,11 +2,13 @@ Node *flatten(Node *root)
 {
     Node *temp=root;
     priority_queue <int,vector<int>,greater<int>> q;
-    while(temp){
+    while(temp)
+    {
         Node *curr = temp;
-        while(curr){
+        while(curr)
+        {
             q.push(curr->data);
-            curr=curr->bottom;
+            curr = curr->bottom;
         }
         temp=temp->next;
     }
